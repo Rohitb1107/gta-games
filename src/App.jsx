@@ -1,11 +1,18 @@
 // import logo from "./logo.svg";
-import "./App.css";
-import Card from "./Components/Card";
+import Card from "./Components/Card/Card";
 
 function App() {
   return (
     <>
-      <Card name="Rohit" />
+      <div id="apparel-items-part">
+        <div id="apparel-heading-part">
+          <p class="apparel-heading-rohit">Apparel</p>
+          <p>SEE ALL</p>
+        </div>
+        <div id="all-card-container">
+          <Card />
+        </div>
+      </div>
     </>
   );
 }

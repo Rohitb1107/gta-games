@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #161616;
+}
+
+#apparel-items-part {
+  width: 100%;
+  height: 45vh;
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2em;
+  color: white;
+  margin-bottom: 5em;
+}
+
+#apparel-items-part #apparel-heading-part {
+  margin: 0 auto 0 auto;
+  width: 85%;
+  height: 6vh;
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: space-between;
+}
+
+#apparel-items-part #apparel-items-content {
+  margin: 0 auto 0 auto;
+  width: 85%;
+  height: 35vh;
+  /* border: 1px solid white; */
+}
+
+.apparel-heading-rohit {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+#apparel-items-part #apparel-item-card {
+  /* border: 1px solid white; */
+  width: 260px;
+  height: 100%;
+}
+
+#apparel-item-img-part {
+  /* border: 1px solid white; */
+  width: 100%;
+  height: 80%;
+  background-color: black;
+}
+
+#apparel-item-img-part img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#apparel-item-title-part {
+  /* border: 1px solid white; */
+  width: 100%;
+  height: 20%;
+  background-color: black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#apparel-item-title-part p {
+  padding: 1em;
+}
+
+#apparel-items-part #all-card-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  margin: auto;
+  gap: 1em;
+  width: 85%;
+}
