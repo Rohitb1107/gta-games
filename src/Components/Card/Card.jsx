@@ -43,7 +43,7 @@ function AllCard() {
         <div id="all-card-container">
           {apparelData.map((curElem) => {
             return (
-              <div>
+              <div key={curElem.id}>
                 <div id="apparel-items-content">
                   <div id="apparel-item-card">
                     <div id="apparel-item-img-part">
@@ -68,7 +68,7 @@ function AllCard() {
         <div id="all-card-container">
           {capsData.map((curElem) => {
             return (
-              <div>
+              <div key={curElem.id}>
                 <div id="apparel-items-content">
                   <div id="apparel-item-card">
                     <div id="apparel-item-img-part">
@@ -94,7 +94,7 @@ function AllCard() {
         <div id="all-card-container">
           {posterData.map((curElem) => {
             return (
-              <div>
+              <div key={curElem.id}>
                 <div id="apparel-items-content">
                   <div id="apparel-item-card">
                     <div id="apparel-item-img-part">
@@ -120,7 +120,7 @@ function AllCard() {
         <div id="all-card-container">
           {CollectiblesData.map((curElem) => {
             return (
-              <div>
+              <div key={curElem.id}>
                 <div id="apparel-items-content">
                   <div id="apparel-item-card">
                     <div id="apparel-item-img-part">
