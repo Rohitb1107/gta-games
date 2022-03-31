@@ -64,7 +64,6 @@ function AllCard() {
       <div id="apparel-items-part">
         <div id="apparel-heading-part">
           <p class="apparel-heading-rohit">Caps</p>
-          <p>SEE ALL</p>
         </div>
         <div id="all-card-container">
           {capsData.map((curElem) => {
@@ -115,7 +114,7 @@ function AllCard() {
       {/* Collectibles Part */}
       <div id="apparel-items-part">
         <div id="apparel-heading-part">
-          <p class="apparel-heading-rohit">collectibles</p>
+          <p class="apparel-heading-rohit">Collectibles</p>
           <p>SEE ALL</p>
         </div>
         <div id="all-card-container">
