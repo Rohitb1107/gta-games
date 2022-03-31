@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./card.css";
 import axios from "axios";
+import Hero from "../Hero/Hero";
 
-function ApparelCard() {
+function AllCard() {
   const [apparelData, setapparelData] = useState([]);
   const [capsData, setcapsData] = useState([]);
   const [posterData, setposterData] = useState([]);
@@ -33,6 +34,8 @@ function ApparelCard() {
 
   return (
     <>
+      <Hero />
+      {/* Apparel Part */}
       <div id="apparel-items-part">
         <div id="apparel-heading-part">
           <p class="apparel-heading-rohit">Apparel</p>
@@ -58,6 +61,7 @@ function ApparelCard() {
         </div>
       </div>
 
+      {/* Caps Part */}
       <div id="apparel-items-part">
         <div id="apparel-heading-part">
           <p class="apparel-heading-rohit">Caps</p>
@@ -83,6 +87,7 @@ function ApparelCard() {
         </div>
       </div>
 
+      {/* Posters Part */}
       <div id="apparel-items-part">
         <div id="apparel-heading-part">
           <p class="apparel-heading-rohit">Posters</p>
@@ -108,6 +113,7 @@ function ApparelCard() {
         </div>
       </div>
 
+      {/* Collectibles Part */}
       <div id="apparel-items-part">
         <div id="apparel-heading-part">
           <p class="apparel-heading-rohit">collectibles</p>
@@ -136,4 +142,4 @@ function ApparelCard() {
   );
 }
 
-export default ApparelCard;
+export default AllCard;

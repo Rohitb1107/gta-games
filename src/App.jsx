@@ -1,4 +1,5 @@
-import AllCard from "./Components/AllCard/AllCard";
+import AllCard from "./Components/Card/Card";
+import Hero from "./Components/Hero/Hero";
 
 function App() {
   return (
