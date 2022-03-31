@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./card.css";
+import axios from "axios";
+
 
 function Card() {
   const [productData, setproductData] = useState([]);
@@ -7,7 +9,9 @@ function Card() {
   const getData = async () => {
     const url = "https://obscure-citadel-15133.herokuapp.com/gear/apparel";
     const response = await fetch(url);
-    setproductData(await response.json());
+    const data = await response.json();
+    const realData = data.gear;
+    setproductData(realData);
   };
 
   useEffect(() => {
@@ -16,26 +20,30 @@ function Card() {
 
   return (
     <>
-      <h1>Hello</h1>
-      {productData.map((curElem) => {
-        return (
-          <div>
-            <div id="apparel-items-content">
-              <div id="apparel-item-card">
-                <div id="apparel-item-img-part">
-                  <img
-                    src="https://images.ctfassets.net/wn7ipiv9ue5v/6R7V40Po1eQftrNZBVasyf/857fbb045e4bb7b72dfc7d1d5c16e4ea/LAN_Tshirt_Mugshot_Front_01.jpg?w=1920&h=&fm=webp&q="
-                    alt=""
-                  />
-                </div>
-                <div id="apparel-item-title-part">
-                  <p>{curElem.name}</p>
+      <div id="apparel-items-part">
+        <div id="apparel-heading-part">
+          <p class="apparel-heading-rohit">Apparel</p>
+          <p>SEE ALL</p>
+        </div>
+        <div id="all-card-container">
+          {productData.map((curElem) => {
+            return (
+              <div>
+                <div id="apparel-items-content">
+                  <div id="apparel-item-card">
+                    <div id="apparel-item-img-part">
+                      <img src={curElem.image} alt="" />
+                    </div>
+                    <div id="apparel-item-title-part">
+                      <p>{curElem.name}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        );
-      })}
+            );
+          })}
+        </div>
+      </div>
     </>
   );
 }
