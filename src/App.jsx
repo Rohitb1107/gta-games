@@ -1,12 +1,9 @@
-// import logo from "./logo.svg";
-// import Card from "./Components/Card/Card";
-import ComA from "./Components/Axios/Compo";
+import AllCard from "./Components/AllCard/AllCard";
 
 function App() {
   return (
     <>
-      {/* <Card /> */}
-      <ComA />
+      <AllCard />
     </>
   );
 }

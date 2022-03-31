@@ -2,20 +2,33 @@ import React, { useEffect, useState } from "react";
 import "./card.css";
 import axios from "axios";
 
-
-function Card() {
-  const [productData, setproductData] = useState([]);
-
-  const getData = async () => {
-    const url = "https://obscure-citadel-15133.herokuapp.com/gear/apparel";
-    const response = await fetch(url);
-    const data = await response.json();
-    const realData = data.gear;
-    setproductData(realData);
-  };
+function ApparelCard() {
+  const [apparelData, setapparelData] = useState([]);
+  const [capsData, setcapsData] = useState([]);
+  const [posterData, setposterData] = useState([]);
+  const [CollectiblesData, setCollectiblesData] = useState([]);
 
   useEffect(() => {
-    getData();
+    axios
+      .get("https://obscure-citadel-15133.herokuapp.com/gear/apparel")
+      .then((res) => {
+        setapparelData(res.data.gear);
+      });
+    axios
+      .get("https://obscure-citadel-15133.herokuapp.com/gear/caps")
+      .then((res) => {
+        setcapsData(res.data.gear);
+      });
+    axios
+      .get("https://obscure-citadel-15133.herokuapp.com/gear/posters")
+      .then((res) => {
+        setposterData(res.data.gear);
+      });
+    axios
+      .get("https://obscure-citadel-15133.herokuapp.com/gear/collectibles")
+      .then((res) => {
+        setCollectiblesData(res.data.gear);
+      });
   }, []);
 
   return (
@@ -26,7 +39,82 @@ function Card() {
           <p>SEE ALL</p>
         </div>
         <div id="all-card-container">
-          {productData.map((curElem) => {
+          {apparelData.map((curElem) => {
+            return (
+              <div>
+                <div id="apparel-items-content">
+                  <div id="apparel-item-card">
+                    <div id="apparel-item-img-part">
+                      <img src={curElem.image} alt="" />
+                    </div>
+                    <div id="apparel-item-title-part">
+                      <p>{curElem.name}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div id="apparel-items-part">
+        <div id="apparel-heading-part">
+          <p class="apparel-heading-rohit">Caps</p>
+          <p>SEE ALL</p>
+        </div>
+        <div id="all-card-container">
+          {capsData.map((curElem) => {
+            return (
+              <div>
+                <div id="apparel-items-content">
+                  <div id="apparel-item-card">
+                    <div id="apparel-item-img-part">
+                      <img src={curElem.image} alt="" />
+                    </div>
+                    <div id="apparel-item-title-part">
+                      <p>{curElem.name}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div id="apparel-items-part">
+        <div id="apparel-heading-part">
+          <p class="apparel-heading-rohit">Posters</p>
+          <p>SEE ALL</p>
+        </div>
+        <div id="all-card-container">
+          {posterData.map((curElem) => {
+            return (
+              <div>
+                <div id="apparel-items-content">
+                  <div id="apparel-item-card">
+                    <div id="apparel-item-img-part">
+                      <img src={curElem.image} alt="" />
+                    </div>
+                    <div id="apparel-item-title-part">
+                      <p>{curElem.name}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div id="apparel-items-part">
+        <div id="apparel-heading-part">
+          <p class="apparel-heading-rohit">collectibles</p>
+          <p>SEE ALL</p>
+        </div>
+        <div id="all-card-container">
+          {CollectiblesData.map((curElem) => {
             return (
               <div>
                 <div id="apparel-items-content">
@@ -48,4 +136,4 @@ function Card() {
   );
 }
 
-export default Card;
+export default ApparelCard;
