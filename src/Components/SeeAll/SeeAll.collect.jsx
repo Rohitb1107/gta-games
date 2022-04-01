@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-const SeeAll = () => {
+const SeeAllCollect = () => {
   const [apparelData, setapparelData] = useState([]);
 
   useEffect(() => {
@@ -49,4 +49,4 @@ const SeeAll = () => {
   );
 };
 
-export default SeeAll;
+export default SeeAllCollect;

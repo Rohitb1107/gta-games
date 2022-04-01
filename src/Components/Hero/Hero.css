@@ -94,6 +94,11 @@ body {
   justify-content: space-between;
 }
 
+#see-all-btn button{
+ width: 5em;
+ height: 2.5em;
+}
+
 #apparel-items-part #apparel-items-content {
   margin: 0 auto 0 auto;
   width: 85%;

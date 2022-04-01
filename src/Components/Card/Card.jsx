@@ -39,7 +39,9 @@ function AllCard() {
       <div id="apparel-items-part">
         <div id="apparel-heading-part">
           <p class="apparel-heading-rohit">Apparel</p>
-          <p>SEE ALL</p>
+          <p id="see-all-btn">
+            <button> SEE ALL </button>
+          </p>
         </div>
         <div id="all-card-container">
           {apparelData.map((curElem) => {
@@ -72,16 +74,18 @@ function AllCard() {
           {capsData.map((curElem) => {
             return (
               <div key={curElem.id}>
-                <div id="apparel-items-content">
-                  <div id="apparel-item-card">
-                    <div id="apparel-item-img-part">
-                      <img src={curElem.image} alt="" />
-                    </div>
-                    <div id="apparel-item-title-part">
-                      <p>{curElem.name}</p>
+                <Link to={`/apparel/${curElem.id}`}>
+                  <div id="apparel-items-content">
+                    <div id="apparel-item-card">
+                      <div id="apparel-item-img-part">
+                        <img src={curElem.image} alt="" />
+                      </div>
+                      <div id="apparel-item-title-part">
+                        <p>{curElem.name}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
             );
           })}
@@ -92,22 +96,26 @@ function AllCard() {
       <div id="apparel-items-part">
         <div id="apparel-heading-part">
           <p class="apparel-heading-rohit">Posters</p>
-          <p>SEE ALL</p>
+          <p id="see-all-btn">
+            <button> SEE ALL </button>
+          </p>
         </div>
         <div id="all-card-container">
           {posterData.map((curElem) => {
             return (
               <div key={curElem.id}>
-                <div id="apparel-items-content">
-                  <div id="apparel-item-card">
-                    <div id="apparel-item-img-part">
-                      <img src={curElem.image} alt="" />
-                    </div>
-                    <div id="apparel-item-title-part">
-                      <p>{curElem.name}</p>
+                <Link to={`/apparel/${curElem.id}`}>
+                  <div id="apparel-items-content">
+                    <div id="apparel-item-card">
+                      <div id="apparel-item-img-part">
+                        <img src={curElem.image} alt="" />
+                      </div>
+                      <div id="apparel-item-title-part">
+                        <p>{curElem.name}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
             );
           })}
@@ -118,22 +126,26 @@ function AllCard() {
       <div id="apparel-items-part">
         <div id="apparel-heading-part">
           <p class="apparel-heading-rohit">Collectibles</p>
-          <p>SEE ALL</p>
+          <p id="see-all-btn">
+            <button> SEE ALL </button>
+          </p>
         </div>
         <div id="all-card-container">
           {CollectiblesData.map((curElem) => {
             return (
               <div key={curElem.id}>
-                <div id="apparel-items-content">
-                  <div id="apparel-item-card">
-                    <div id="apparel-item-img-part">
-                      <img src={curElem.image} alt="" />
-                    </div>
-                    <div id="apparel-item-title-part">
-                      <p>{curElem.name}</p>
+                <Link to={`/apparel/${curElem.id}`}>
+                  <div id="apparel-items-content">
+                    <div id="apparel-item-card">
+                      <div id="apparel-item-img-part">
+                        <img src={curElem.image} alt="" />
+                      </div>
+                      <div id="apparel-item-title-part">
+                        <p>{curElem.name}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
             );
           })}
