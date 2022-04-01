@@ -1,6 +1,6 @@
 import AllCard from "./Components/Card/Card";
 import Product from "./Components/Product/Product";
-import {Switch, Route} from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -8,9 +8,10 @@ function App() {
       <AllCard />
       {/* <Product /> */}
 
-      <Switch>
-        <Route></Route>
-      </Switch>
+      {/* <Routes>
+        <Route exact path="/" component={AllCard} />
+        <Route exact path="/:id" component={Product} />
+      </Routes> */}
     </>
   );
 }

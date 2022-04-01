@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import Hero from "../Hero/Hero";
 
@@ -44,16 +45,18 @@ function AllCard() {
           {apparelData.map((curElem) => {
             return (
               <div key={curElem.id}>
-                <div id="apparel-items-content">
-                  <div id="apparel-item-card">
-                    <div id="apparel-item-img-part">
-                      <img src={curElem.image} alt="" />
-                    </div>
-                    <div id="apparel-item-title-part">
-                      <p>{curElem.name}</p>
+                <Link to={`/apparel/${curElem.id}`}>
+                  <div id="apparel-items-content">
+                    <div id="apparel-item-card">
+                      <div id="apparel-item-img-part">
+                        <img src={curElem.image} alt="" />
+                      </div>
+                      <div id="apparel-item-title-part">
+                        <p>{curElem.name}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
             );
           })}

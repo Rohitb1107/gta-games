@@ -1,11 +1,20 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./Product.css";
 
 const Product = () => {
+  const { id } = useParams();
+  const [product, setproduct] = useState([]);
   const [apparelData, setapparelData] = useState([]);
 
   useEffect(() => {
+    axios
+      .get(`https://obscure-citadel-15133.herokuapp.com/gear/apparel/${id}`)
+      .then((res) => {
+        setproduct(res.data.gear);
+        console.log(res.data.gear);
+      });
     axios
       .get("https://obscure-citadel-15133.herokuapp.com/gear/apparel")
       .then((res) => {
@@ -78,6 +87,7 @@ const Product = () => {
         </div>
       </div>
 
+      {/* Related Products */}
       <div id="apparel-items-part">
         <div id="apparel-heading-part">
           <p class="apparel-heading-rohit">Realted Products</p>
