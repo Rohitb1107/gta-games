@@ -5,8 +5,8 @@ import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      <AllCard />
-      {/* <Product /> */}
+      {/* <AllCard /> */}
+      <Product />
 
       {/* <Routes>
         <Route exact path="/" component={AllCard} />
