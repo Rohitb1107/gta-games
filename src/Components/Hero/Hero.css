@@ -41,7 +41,6 @@ body {
 #hero-part #left-hero-part {
   width: 30%;
   height: 100%;
-  /* border: 1px solid white; */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -73,6 +72,7 @@ body {
 
 #hero-part #right-hero-part img {
   width: 100%;
+  height: 100%;
 }
 
 #apparel-items-part {
@@ -109,7 +109,7 @@ body {
 
 #apparel-items-part #apparel-item-card {
   /* border: 1px solid white; */
-  width: 260px;
+  width: 100%;
 }
 
 #apparel-item-img-part {
@@ -134,6 +134,7 @@ body {
 }
 
 #apparel-item-title-part p {
+  font-size: 1em;
   padding: 5px 10px 0 10px;
 }
 
@@ -144,6 +145,37 @@ body {
   width: 90%;
 }
 
-@media only screen and (max-width: 1200px) and (max-width: 1500px) {
-  
+@media only screen and (min-width: 1100px) and (max-width: 1300px) {
+  #apparel-items-part #all-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1100px) {
+  #apparel-items-part #all-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+  #apparel-items-part #all-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+  #apparel-items-part #all-card-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: auto;
+    width: 90%;
+  }
 }
